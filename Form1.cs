@@ -176,29 +176,40 @@ namespace PublishersTableInputForm
             this.Close();
         }
 
-        private void txtYearBorn_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= '0' && e.KeyChar <= '9') || (int)e.KeyChar == 8)
-            {
-                //Acceptable keystrokes
-                e.Handled = false;
-            }
-            else if ((int)e.KeyChar == 13)
-            {
-                //This sets its attention to the txtAuthorName
-                txtPubName.Focus();
-            }
-            else
-            {
-                e.Handled = true;
-                Console.Beep();
-            }
-        }
-        private void txtAuthorName_KeyPress(Object sender, KeyPressEventArgs e)
+        private void txtInput_KeyPress(Object sender, KeyPressEventArgs e)
         {
             if ((int)e.KeyChar == 13)
             {
-                txtCompanyName.Focus();
+                switch (whichBox.Name)
+                {
+                    case "txtPubName":
+                        txtCompanyName.Focus();
+                        break;
+                    case "txtCompanyName":
+                        txtPubAddress.Focus();
+                        break;
+                    case "txtPubAddress":
+                        txtPubCity.Focus();
+                        break;
+                    case "txtPubCity":
+                        txtPubState.Focus();
+                        break;
+                    case "txtPubState":
+                        txtPubZip.Focus();
+                        break;
+                    case "txtPubZip":
+                        txtPubTelephone.Focus();
+                        break;
+                    case "txtPubTelephone":
+                        txtPubFAX.Focus();
+                        break;
+                    case "txtPubFAX":
+                        txtPubComments.Focus();
+                        break;
+                    case "txtPubComments":
+                        txtPubName.Focus();
+                        break;
+                }
             }
         }
 
@@ -211,6 +222,13 @@ namespace PublishersTableInputForm
                     txtPubID.ForeColor = Color.Black;
                     txtPubName.ReadOnly = true;
                     txtCompanyName.ReadOnly = true;
+                    txtPubAddress.ReadOnly = true;
+                    txtPubCity.ReadOnly = true;
+                    txtPubState.ReadOnly = true;
+                    txtPubZip.ReadOnly = true;
+                    txtPubTelephone.ReadOnly = true;
+                    txtPubFAX.ReadOnly = true;
+                    txtPubComments.ReadOnly = true;
                     btnPrevious.Enabled = true;
                     btnNext.Enabled = true;
                     btnAddNew.Enabled = true;
@@ -226,6 +244,13 @@ namespace PublishersTableInputForm
                     txtPubID.ForeColor = Color.White;
                     txtPubName.ReadOnly = false;
                     txtCompanyName.ReadOnly = false;
+                    txtPubAddress.ReadOnly = false
+                    txtPubCity.ReadOnly = false;
+                    txtPubState.ReadOnly = false;
+                    txtPubZip.ReadOnly = false;
+                    txtPubTelephone.ReadOnly = false;
+                    txtPubFAX.ReadOnly = false;
+                    txtPubComments.ReadOnly = false;
                     btnPrevious.Enabled = false;
                     btnNext.Enabled = false;
                     btnAddNew.Enabled = false;
