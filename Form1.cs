@@ -19,19 +19,19 @@ namespace PublishersTableInputForm
             InitializeComponent();
         }
 
-        //level declarations that will be used in the frmAuthors_Load
+        //level declarations that will be used in the frmPublishers_Load
         SqlConnection booksConnection;
         SqlCommand publishersCommand;
         SqlDataAdapter publishersAdapter;
         DataTable publishersTable;
         CurrencyManager publishersManager;
 
-        private void frmAuthors_Load(object sender, EventArgs e)
+        private void frmPublishers_Load(object sender, EventArgs e)
         {
             try
             {
                 //point to help file
-                hlpAuthors.HelpNamespace = Application.StartupPath + "\\authors.chm";
+                hlpPublishers.HelpNamespace = Application.StartupPath + "\\publishers.chm";
 
                 //connect to the books database (this will lead to successful connection)
                 string fullfile = Path.GetFullPath("SQLBooksDB.mdf");
@@ -74,14 +74,14 @@ namespace PublishersTableInputForm
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error establishing Authors table.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error establishing Publishers table.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //When the applicaiton starts it will be in view state
             this.Show();
             SetState("View");
         }
 
-        private void frmAuthors_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmPublishers_FormClosing(object sender, FormClosingEventArgs e)
         {
             // close the connection 
             booksConnection.Close();
@@ -168,7 +168,7 @@ namespace PublishersTableInputForm
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, hlpAuthors.HelpNamespace);
+            Help.ShowHelp(this, hlpPublishers.HelpNamespace);
         }
 
         private void btnDone_Click(object sender, EventArgs e)

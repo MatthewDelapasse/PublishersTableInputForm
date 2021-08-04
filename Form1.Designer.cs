@@ -44,7 +44,7 @@ namespace PublishersTableInputForm
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.hlpAuthors = new System.Windows.Forms.HelpProvider();
+            this.hlpPublishers = new System.Windows.Forms.HelpProvider();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPubAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -366,16 +366,22 @@ namespace PublishersTableInputForm
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.hlpAuthors.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
+            this.hlpPublishers.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
             this.Name = "frmPublishers";
-            this.hlpAuthors.SetShowHelp(this, true);
+            this.hlpPublishers.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publishers";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAuthors_FormClosing);
-            this.Load += new System.EventHandler(this.frmAuthors_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPublishers_FormClosing);
+            this.Load += new System.EventHandler(this.frmPublishers_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void FrmPublishers_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion
@@ -395,7 +401,7 @@ namespace PublishersTableInputForm
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.HelpProvider hlpAuthors;
+        private System.Windows.Forms.HelpProvider hlpPublishers;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPubAddress;
         private System.Windows.Forms.Label label5;
