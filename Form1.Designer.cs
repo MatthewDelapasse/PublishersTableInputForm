@@ -106,7 +106,6 @@ namespace PublishersTableInputForm
             this.txtCompanyName.ReadOnly = true;
             this.txtCompanyName.Size = new System.Drawing.Size(138, 23);
             this.txtCompanyName.TabIndex = 5;
-            this.txtCompanyName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearBorn_KeyPress);
             // 
             // btnPrevious
             // 
@@ -236,6 +235,7 @@ namespace PublishersTableInputForm
             this.Text = "Publishers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAuthors_FormClosing);
             this.Load += new System.EventHandler(this.frmAuthors_Load);
+            this.frmPublishers.Keypress = new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
