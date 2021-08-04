@@ -279,19 +279,6 @@ namespace PublishersTableInputForm
                 allOK = false;
             }
 
-            //Check length and range on Year Born
-            if (!txtCompanyName.Text.Trim().Equals(""))
-            {
-                inputYear = Convert.ToInt32(txtCompanyName.Text);
-                currentYear = DateTime.Now.Year;
-                if (inputYear > currentYear || inputYear < currentYear - 150)
-                {
-                    message += "Year born must be between " + (currentYear - 150).ToString() + " and " + currentYear.ToString();
-                    txtCompanyName.Focus();
-                    allOK = false;
-                }
-            }
-
             if (!allOK)
             {
                 MessageBox.Show(message, "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
