@@ -58,10 +58,17 @@ namespace PublishersTableInputForm
                 publishersAdapter.Fill(authorsTable);
 
                 //bind controls to data table
-                txtPubID.DataBindings.Add("Text", authorsTable, "Au_ID");
-                txtPubName.DataBindings.Add("Text", authorsTable, "Author");
-                txtCompanyName.DataBindings.Add("Text", authorsTable, "Year_Born");
-
+                txtPubID.DataBindings.Add("Text", publishersTable, "Au_ID");
+                txtPubName.DataBindings.Add("Text", publishersTable, "Author");
+                txtCompanyName.DataBindings.Add("Text", publishersTable, "Company_Name");
+                txtPubAdress.DataBindings.Add("Text", publishersTable, "Address");
+                txtPubCity.DataBindings.Add("Text", publishersTable, "City");
+                txtPubState.DataBindings.Add("Text", publishersTable, "State");
+                txtPubZip.DataBindings.Add("Text", publishersTable, "Zip");
+                txtPubTelephone.DataBindings.Add("Text", publishersTable, "Telephone");
+                txtPubFAX.DataBindings.Add("Text", publishersTable, "FAX");
+                txtPubComments.DataBindings.Add("Text", publishersTable, "Comments");
+                
                 //establish currency manager
                 publishersManager = (CurrencyManager)this.BindingContext[publishersTable];
             }
