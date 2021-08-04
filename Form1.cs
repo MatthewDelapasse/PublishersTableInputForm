@@ -55,13 +55,13 @@ namespace PublishersTableInputForm
                 publishersAdapter = new SqlDataAdapter();
                 publishersAdapter.SelectCommand = publishersCommand;
                 publishersTable = new DataTable();
-                publishersAdapter.Fill(authorsTable);
+                publishersAdapter.Fill(publishersTable);
 
                 //bind controls to data table
                 txtPubID.DataBindings.Add("Text", publishersTable, "Au_ID");
                 txtPubName.DataBindings.Add("Text", publishersTable, "Author");
                 txtCompanyName.DataBindings.Add("Text", publishersTable, "Company_Name");
-                txtPubAdress.DataBindings.Add("Text", publishersTable, "Address");
+                txtPubAddress.DataBindings.Add("Text", publishersTable, "Address");
                 txtPubCity.DataBindings.Add("Text", publishersTable, "City");
                 txtPubState.DataBindings.Add("Text", publishersTable, "State");
                 txtPubZip.DataBindings.Add("Text", publishersTable, "Zip");
@@ -178,6 +178,7 @@ namespace PublishersTableInputForm
 
         private void txtInput_KeyPress(Object sender, KeyPressEventArgs e)
         {
+            TextBox whichBox = (TextBox)sender;
             if ((int)e.KeyChar == 13)
             {
                 switch (whichBox.Name)
@@ -244,7 +245,7 @@ namespace PublishersTableInputForm
                     txtPubID.ForeColor = Color.White;
                     txtPubName.ReadOnly = false;
                     txtCompanyName.ReadOnly = false;
-                    txtPubAddress.ReadOnly = false
+                    txtPubAddress.ReadOnly = false;
                     txtPubCity.ReadOnly = false;
                     txtPubState.ReadOnly = false;
                     txtPubZip.ReadOnly = false;

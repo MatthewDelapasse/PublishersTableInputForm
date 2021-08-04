@@ -45,74 +45,81 @@ namespace PublishersTableInputForm
             this.btnDone = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.hlpAuthors = new System.Windows.Forms.HelpProvider();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPubAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPubCity = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPubState = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPubZip = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPubTelephone = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPubFAX = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPubComments = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 43);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(30, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.Size = new System.Drawing.Size(107, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Publisher ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 76);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(30, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(59, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 111);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(30, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 15);
+            this.label3.Size = new System.Drawing.Size(141, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Company Name";
             // 
             // txtPubID
             // 
             this.txtPubID.BackColor = System.Drawing.Color.White;
-            this.txtPubID.Location = new System.Drawing.Point(120, 38);
-            this.txtPubID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPubID.Location = new System.Drawing.Point(180, 69);
             this.txtPubID.Name = "txtPubID";
             this.txtPubID.ReadOnly = true;
-            this.txtPubID.Size = new System.Drawing.Size(138, 23);
+            this.txtPubID.Size = new System.Drawing.Size(195, 31);
             this.txtPubID.TabIndex = 3;
             // 
             // txtPubName
             // 
             this.txtPubName.BackColor = System.Drawing.Color.White;
-            this.txtPubName.Location = new System.Drawing.Point(118, 72);
-            this.txtPubName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPubName.Location = new System.Drawing.Point(180, 107);
             this.txtPubName.Name = "txtPubName";
             this.txtPubName.ReadOnly = true;
-            this.txtPubName.Size = new System.Drawing.Size(308, 23);
+            this.txtPubName.Size = new System.Drawing.Size(438, 31);
             this.txtPubName.TabIndex = 4;
             // 
             // txtCompanyName
             // 
             this.txtCompanyName.BackColor = System.Drawing.Color.White;
-            this.txtCompanyName.Location = new System.Drawing.Point(118, 108);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCompanyName.Location = new System.Drawing.Point(180, 144);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.ReadOnly = true;
-            this.txtCompanyName.Size = new System.Drawing.Size(138, 23);
+            this.txtCompanyName.Size = new System.Drawing.Size(438, 31);
             this.txtCompanyName.TabIndex = 5;
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(120, 151);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Location = new System.Drawing.Point(154, 460);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(88, 24);
+            this.btnPrevious.Size = new System.Drawing.Size(126, 40);
             this.btnPrevious.TabIndex = 6;
             this.btnPrevious.Text = "<= Previous";
             this.btnPrevious.UseVisualStyleBackColor = true;
@@ -120,10 +127,9 @@ namespace PublishersTableInputForm
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(239, 151);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Location = new System.Drawing.Point(324, 460);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(77, 24);
+            this.btnNext.Size = new System.Drawing.Size(110, 40);
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "Next =>";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -131,10 +137,9 @@ namespace PublishersTableInputForm
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(64, 180);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Location = new System.Drawing.Point(74, 508);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(77, 24);
+            this.btnEdit.Size = new System.Drawing.Size(110, 40);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "&Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -142,10 +147,9 @@ namespace PublishersTableInputForm
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(177, 180);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(236, 508);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(77, 24);
+            this.btnSave.Size = new System.Drawing.Size(110, 40);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -153,10 +157,9 @@ namespace PublishersTableInputForm
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(295, 180);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(404, 508);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(77, 24);
+            this.btnCancel.Size = new System.Drawing.Size(110, 40);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -164,10 +167,9 @@ namespace PublishersTableInputForm
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(64, 209);
-            this.btnAddNew.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddNew.Location = new System.Drawing.Point(74, 556);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(77, 24);
+            this.btnAddNew.Size = new System.Drawing.Size(110, 40);
             this.btnAddNew.TabIndex = 11;
             this.btnAddNew.Text = "&Add New";
             this.btnAddNew.UseVisualStyleBackColor = true;
@@ -175,10 +177,9 @@ namespace PublishersTableInputForm
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(177, 209);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(236, 556);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(77, 24);
+            this.btnDelete.Size = new System.Drawing.Size(110, 40);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -186,10 +187,9 @@ namespace PublishersTableInputForm
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(295, 209);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDone.Location = new System.Drawing.Point(404, 556);
             this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(77, 24);
+            this.btnDone.Size = new System.Drawing.Size(110, 40);
             this.btnDone.TabIndex = 13;
             this.btnDone.Text = "Do&ne";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -197,20 +197,159 @@ namespace PublishersTableInputForm
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(295, 237);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHelp.Location = new System.Drawing.Point(404, 602);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(77, 24);
+            this.btnHelp.Size = new System.Drawing.Size(110, 40);
             this.btnHelp.TabIndex = 14;
             this.btnHelp.Text = "&Help";
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(30, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 25);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Address";
+            // 
+            // txtPubAddress
+            // 
+            this.txtPubAddress.BackColor = System.Drawing.Color.White;
+            this.txtPubAddress.Location = new System.Drawing.Point(180, 183);
+            this.txtPubAddress.Name = "txtPubAddress";
+            this.txtPubAddress.ReadOnly = true;
+            this.txtPubAddress.Size = new System.Drawing.Size(438, 31);
+            this.txtPubAddress.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 25);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "City";
+            // 
+            // txtPubCity
+            // 
+            this.txtPubCity.BackColor = System.Drawing.Color.White;
+            this.txtPubCity.Location = new System.Drawing.Point(180, 220);
+            this.txtPubCity.Name = "txtPubCity";
+            this.txtPubCity.ReadOnly = true;
+            this.txtPubCity.Size = new System.Drawing.Size(438, 31);
+            this.txtPubCity.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 25);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "State";
+            // 
+            // txtPubState
+            // 
+            this.txtPubState.BackColor = System.Drawing.Color.White;
+            this.txtPubState.Location = new System.Drawing.Point(181, 260);
+            this.txtPubState.Name = "txtPubState";
+            this.txtPubState.ReadOnly = true;
+            this.txtPubState.Size = new System.Drawing.Size(194, 31);
+            this.txtPubState.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 25);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Zip";
+            // 
+            // txtPubZip
+            // 
+            this.txtPubZip.BackColor = System.Drawing.Color.White;
+            this.txtPubZip.Location = new System.Drawing.Point(181, 297);
+            this.txtPubZip.Name = "txtPubZip";
+            this.txtPubZip.ReadOnly = true;
+            this.txtPubZip.Size = new System.Drawing.Size(194, 31);
+            this.txtPubZip.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 337);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 25);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Telephone";
+            // 
+            // txtPubTelephone
+            // 
+            this.txtPubTelephone.BackColor = System.Drawing.Color.White;
+            this.txtPubTelephone.Location = new System.Drawing.Point(181, 334);
+            this.txtPubTelephone.Name = "txtPubTelephone";
+            this.txtPubTelephone.ReadOnly = true;
+            this.txtPubTelephone.Size = new System.Drawing.Size(194, 31);
+            this.txtPubTelephone.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(30, 373);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 25);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "FAX";
+            // 
+            // txtPubFAX
+            // 
+            this.txtPubFAX.BackColor = System.Drawing.Color.White;
+            this.txtPubFAX.Location = new System.Drawing.Point(181, 370);
+            this.txtPubFAX.Name = "txtPubFAX";
+            this.txtPubFAX.ReadOnly = true;
+            this.txtPubFAX.Size = new System.Drawing.Size(194, 31);
+            this.txtPubFAX.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(30, 409);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 25);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Comments";
+            // 
+            // txtPubComments
+            // 
+            this.txtPubComments.BackColor = System.Drawing.Color.White;
+            this.txtPubComments.Location = new System.Drawing.Point(180, 406);
+            this.txtPubComments.Name = "txtPubComments";
+            this.txtPubComments.ReadOnly = true;
+            this.txtPubComments.Size = new System.Drawing.Size(438, 31);
+            this.txtPubComments.TabIndex = 9;
+            // 
             // frmPublishers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 279);
+            this.ClientSize = new System.Drawing.Size(631, 656);
+            this.Controls.Add(this.txtPubComments);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtPubFAX);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtPubTelephone);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtPubZip);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtPubState);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtPubCity);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtPubAddress);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.btnDelete);
@@ -228,14 +367,12 @@ namespace PublishersTableInputForm
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.hlpAuthors.SetHelpNavigator(this, System.Windows.Forms.HelpNavigator.TableOfContents);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPublishers";
             this.hlpAuthors.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publishers";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAuthors_FormClosing);
             this.Load += new System.EventHandler(this.frmAuthors_Load);
-            this.frmPublishers.Keypress = new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,6 +396,20 @@ namespace PublishersTableInputForm
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.HelpProvider hlpAuthors;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPubAddress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtPubCity;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtPubState;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPubZip;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPubTelephone;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPubFAX;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtPubComments;
     }
 }
 
