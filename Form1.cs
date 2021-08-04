@@ -21,10 +21,10 @@ namespace PublishersTableInputForm
 
         //level declarations that will be used in the frmAuthors_Load
         SqlConnection booksConnection;
-        SqlCommand authorsCommand;
-        SqlDataAdapter authorsAdapter;
-        DataTable authorsTable;
-        CurrencyManager authorsManager;
+        SqlCommand publishersCommand;
+        SqlDataAdapter publishersAdapter;
+        DataTable publishersTable;
+        CurrencyManager publishersManager;
 
         private void frmAuthors_Load(object sender, EventArgs e)
         {
@@ -46,16 +46,16 @@ namespace PublishersTableInputForm
                 //MessageBox.Show("the connection was successfull");
 
                 //establish command object
-                authorsCommand = new SqlCommand("SELECT * FROM Authors ORDER BY Author", booksConnection);
+                publishersCommand = new SqlCommand("SELECT * FROM Publishers ORDER BY Name", booksConnection);
 
                 ////connection object established
                 //MessageBox.Show("The connection object established.");
 
                 //esablish data adapter/data table
-                authorsAdapter = new SqlDataAdapter();
-                authorsAdapter.SelectCommand = authorsCommand;
-                authorsTable = new DataTable();
-                authorsAdapter.Fill(authorsTable);
+                publishersAdapter = new SqlDataAdapter();
+                publishersAdapter.SelectCommand = publishersCommand;
+                publishersTable = new DataTable();
+                publishersAdapter.Fill(authorsTable);
 
                 //bind controls to data table
                 txtPubID.DataBindings.Add("Text", authorsTable, "Au_ID");
@@ -63,7 +63,7 @@ namespace PublishersTableInputForm
                 txtCompanyName.DataBindings.Add("Text", authorsTable, "Year_Born");
 
                 //establish currency manager
-                authorsManager = (CurrencyManager)this.BindingContext[authorsTable];
+                publishersManager = (CurrencyManager)this.BindingContext[publishersTable];
             }
             catch (Exception ex)
             {
@@ -81,9 +81,9 @@ namespace PublishersTableInputForm
 
             //dispose of the objects
             booksConnection.Dispose();
-            authorsCommand.Dispose();
-            authorsAdapter.Dispose();
-            authorsTable.Dispose();
+            publishersCommand.Dispose();
+            publishersAdapter.Dispose();
+            publishersTable.Dispose();
         }
 
         private void btnAddNew_Click(object sender, EventArgs e)
@@ -105,20 +105,20 @@ namespace PublishersTableInputForm
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            if (authorsManager.Position == 0)
+            if (publishersManager.Position == 0)
             {
                 Console.Beep();
             }
-            authorsManager.Position--;
+            publishersManager.Position--;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (authorsManager.Position == authorsManager.Count - 1)
+            if (publishersManager.Position == publishersManager.Count - 1)
             {
                 Console.Beep();
             }
-            authorsManager.Position++;
+            publishersManager.Position++;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
