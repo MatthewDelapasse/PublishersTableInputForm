@@ -68,7 +68,7 @@ namespace PublishersTableInputForm
                 txtPubTelephone.DataBindings.Add("Text", publishersTable, "Telephone");
                 txtPubFAX.DataBindings.Add("Text", publishersTable, "FAX");
                 txtPubComments.DataBindings.Add("Text", publishersTable, "Comments");
-                
+
                 //establish currency manager
                 publishersManager = (CurrencyManager)this.BindingContext[publishersTable];
             }
