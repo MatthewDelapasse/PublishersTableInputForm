@@ -58,8 +58,8 @@ namespace PublishersTableInputForm
                 publishersAdapter.Fill(publishersTable);
 
                 //bind controls to data table
-                txtPubID.DataBindings.Add("Text", publishersTable, "Au_ID");
-                txtPubName.DataBindings.Add("Text", publishersTable, "Author");
+                txtPubID.DataBindings.Add("Text", publishersTable, "PubID");
+                txtPubName.DataBindings.Add("Text", publishersTable, "Name");
                 txtCompanyName.DataBindings.Add("Text", publishersTable, "Company_Name");
                 txtPubAddress.DataBindings.Add("Text", publishersTable, "Address");
                 txtPubCity.DataBindings.Add("Text", publishersTable, "City");
@@ -268,7 +268,6 @@ namespace PublishersTableInputForm
         private bool ValidateData()
         {
             string message = "";
-            int inputYear, currentYear;
             bool allOK = true;
 
             // Check for name
